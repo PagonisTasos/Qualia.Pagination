@@ -112,9 +112,9 @@ namespace Qualia.Pagination
 
             if (isNearFirstPage()) return Enumerable.Range(1, otherPages);
 
-            if (isNearLastPage()) return Enumerable.Range(lastPage - otherPages + 1, lastPage);
+            if (isNearLastPage()) return Enumerable.Range(lastPage - otherPages + 1, otherPages);
 
-            return Enumerable.Range(currentPage - maxPagesBeforeCurrentPage, currentPage + maxPagesAfterCurrentPage);
+            return Enumerable.Range(currentPage - maxPagesBeforeCurrentPage, otherPages);
         }
 
 
